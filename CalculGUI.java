@@ -3,7 +3,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class CalculGUI extends JFrame {
-	private JButton button = new JButton("Выполнить расчет");
+	private JButton button = new JButton("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
 	
 	private JTextField input1 = new JTextField("",4);
 	private JTextField input2 = new JTextField("",4);
@@ -11,17 +11,42 @@ public class CalculGUI extends JFrame {
 	private JTextField input4 = new JTextField("",4);
 	private JTextField input5 = new JTextField("",4);
 	
-	private JLabel label1 = new JLabel("Количество отработанных дней:");
-	private JLabel label2 = new JLabel("Оклад, руб.:");
-	private JLabel label3 = new JLabel("Премия, руб.:");
-	private JLabel label4 = new JLabel("Количество рабочих дней в месяце:");
-	private JLabel label5 = new JLabel("Заработная плата сотрудника составит, руб.:");
+	private JLabel label1 = new JLabel("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ:");
+	private JLabel label2 = new JLabel("пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ.:");
+	private JLabel label3 = new JLabel("пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ.:");
+	private JLabel label4 = new JLabel("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:");
+	private JLabel label5 = new JLabel("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ.:");
 	
 	public CalculGUI() {
-		super("Калькулятор расчета заработной платы"); 
+		super("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ"); 
 		this.setBounds(100, 100,800, 200);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 		Container container = this.getContentPane();
 		container.setLayout(new GridLayout(3,2,2,2));
 		input5.disable();
+		
+		container.add(label1);
+		container.add(input1);
+		
+		container.add(label2);
+		container.add(input2);
+		
+		container.add(label3);
+		container.add(input3);
+		
+		container.add(label4);
+		container.add(input4);
+		
+		container.add(label5);
+		container.add(input5);
+		
+		//Р—РђР”РђРќРР• РР—РќРђР§РђР›Р¬РќР«РҐ РќРЈР›Р•Р’Р«РҐ Р—РќРђР§Р•РќРР™
+		input1.setText("0");
+		input2.setText("0");
+		input3.setText("0");
+		input4.setText("0");
+		
+		button.addActionListener(new ButtonEventListener());
+		container.add(button);
+	}
