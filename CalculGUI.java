@@ -25,3 +25,28 @@ public class CalculGUI extends JFrame {
 		Container container = this.getContentPane();
 		container.setLayout(new GridLayout(3,2,2,2));
 		input5.disable();
+		
+		container.add(label1);
+		container.add(input1);
+		
+		container.add(label2);
+		container.add(input2);
+		
+		container.add(label3);
+		container.add(input3);
+		
+		container.add(label4);
+		container.add(input4);
+		
+		container.add(label5);
+		container.add(input5);
+		
+		//ÇÀÄÀÍÈÅ ÈÇÍÀ×ÀËÜÍÛÕ ÍÓËÅÂÛÕ ÇÍÀ×ÅÍÈÉ
+		input1.setText("0");
+		input2.setText("0");
+		input3.setText("0");
+		input4.setText("0");
+		
+		button.addActionListener(new ButtonEventListener());
+		container.add(button);
+	}
