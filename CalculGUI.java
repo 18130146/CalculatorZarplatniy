@@ -50,3 +50,55 @@ public class CalculGUI extends JFrame {
 		button.addActionListener(new ButtonEventListener());
 		container.add(button);
 	}
+	
+	class ButtonEventListener implements ActionListener {
+		public void actionPerformed (ActionEvent e) {
+			int a1 = 0;
+			Double a2 = null;
+			Double a3 = null;
+			int a4 = 0;
+			boolean check = true;
+			
+	
+			//ПРОВЕРКИ И ОГРАНИЧЕНИЯ
+			
+			//1
+			if((Integer.valueOf(input1.getText()) > 31) | (Integer.valueOf(input4.getText()) % 1 != 0) | Integer.valueOf(input1.getText()) < 0) {
+				check = false;
+			} else {
+				a1 = Integer.valueOf(input4.getText());	
+			}
+			
+			//2
+			if((Double.valueOf(input2.getText()) <= 0)) {
+				
+				check = false;
+			} else {
+				a2 = Double.valueOf(input2.getText());
+			}
+			
+			//3
+			if((Double.valueOf(input3.getText()) < 0)) {
+				
+				check = false;
+			} else {
+				a3 = Double.valueOf(input3.getText());
+			}
+			
+			//4
+			if((Integer.valueOf(input4.getText()) > 31) | (Integer.valueOf(input4.getText()) % 1 != 0) | Integer.valueOf(input4.getText()) < 0) {
+				
+				check = false;
+			} else {
+				a4 = Integer.valueOf(input4.getText());	
+			}
+			
+			
+			if(!check) {
+				JOptionPane.showMessageDialog(null, "Введено недопустимое значение");
+			} else {
+			Double ZP = (double) ((a1*a2)/a4 + a3);
+			input5.setText(String.valueOf(ZP));}
+		}
+	} 
+}
