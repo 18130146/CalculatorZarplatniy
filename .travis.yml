@@ -3,3 +3,4 @@ os: osx
   script:
 - mvn -f pom.xml
 - mvn clean package
+
