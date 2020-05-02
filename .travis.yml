@@ -1,5 +1,4 @@
 language: java
 os: osx 
   script:
-- mvn -f /Users/travis/build/18130146/CalculatorZarplatniy/pom.xml <-X>
 - mvn clean package
