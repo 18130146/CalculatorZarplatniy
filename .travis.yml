@@ -1,4 +1,4 @@
 language: java
 os: osx 
-  script:
+script:
 - mvn clean package
