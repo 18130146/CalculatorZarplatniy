@@ -3,4 +3,3 @@ os: osx
   script:
 - mvn -f /Users/travis/build/18130146/CalculatorZarplatniy/pom.xml
 - mvn clean package
-
