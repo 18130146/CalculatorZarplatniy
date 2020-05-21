@@ -1,5 +1,4 @@
 language: java
 os: osx 
 script:
-- mvn install - Dmaven . тест . skip = true
 - mvn clean package
